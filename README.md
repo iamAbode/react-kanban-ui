@@ -16,7 +16,11 @@
 
 
 
+
+
 New Feature: User Authentication and Task Assignment for Kanban Board
 
 Background:
 Currently, the Kanban board allows users to move tasks between columns, but it lacks user authentication and task assignment functionalities. This feature is necessary to facilitate collaboration among team members, allowing users to log in, assign tasks to specific individuals, and track their progress. With this feature, teams will be able to manage tasks more efficiently by personalizing the board to display tasks assigned to them.
+
+These features will improve the Kanban board by introducing collaboration, task management, and personalized views.

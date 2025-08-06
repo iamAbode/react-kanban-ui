@@ -1,0 +1,127 @@
+.demo-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    color: white;
+
+    &__container {
+        max-width: 100%;
+        
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    &__user-data {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 16px;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+
+        h4 {
+            margin-bottom: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        
+        strong {
+            min-width: 100px;
+            color: #f8f9fa;
+        }
+    }
+
+    &__features {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 16px;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+
+        h4 {
+            margin-bottom: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 4px 0;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+    }
+
+    &__note {
+        grid-column: 1 / -1;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 16px;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        border-left: 4px solid #ffd700;
+
+        p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            
+            strong {
+                color: #ffd700;
+            }
+        }
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .demo-info {
+        padding: 16px;
+        margin-bottom: 16px;
+
+        &__container h3 {
+            font-size: 1.3rem;
+        }
+
+        &__item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+
+            strong {
+                min-width: auto;
+            }
+        }
+    }
+}

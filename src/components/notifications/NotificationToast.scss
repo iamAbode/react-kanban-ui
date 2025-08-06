@@ -1,0 +1,126 @@
+.notification-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e1e5e9;
+    max-width: 400px;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1100;
+
+    &--hidden {
+        animation: slideOut 0.3s ease-in forwards;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        color: #6c757d;
+
+        &--move {
+            color: #17a2b8;
+        }
+
+        &--assign {
+            color: #667eea;
+        }
+
+        &--update {
+            color: #28a745;
+        }
+    }
+
+    &__text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    &__message {
+        margin: 0 0 4px 0;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #2c3e50;
+        line-height: 1.4;
+    }
+
+    &__details {
+        font-size: 0.85rem;
+        color: #6c757d;
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #6c757d;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        transition: width 0.05s linear;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .notification-toast {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        max-width: none;
+    }
+}

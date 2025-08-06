@@ -1,0 +1,23 @@
+.notification-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 1100;
+
+    &__item {
+        position: absolute;
+        right: 20px;
+        transition: bottom 0.3s ease-out;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .notification-container {
+        &__item {
+            right: 10px;
+            left: 10px;
+        }
+    }
+}
